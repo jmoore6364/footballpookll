@@ -1,0 +1,100 @@
+.tiebreaker {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: white;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tiebreaker.locked {
+  opacity: 0.8;
+}
+
+.tiebreaker-header h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.125rem;
+}
+
+.tiebreaker-header p {
+  margin: 0;
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+.monday-game {
+  margin-top: 0.5rem !important;
+  font-weight: 600;
+  color: #FFB612;
+}
+
+.tiebreaker-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tiebreaker-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.tiebreaker-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.tiebreaker-input:focus {
+  outline: none;
+  border-color: #FFB612;
+}
+
+.tiebreaker-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.tiebreaker-submit {
+  padding: 0.75rem 1.5rem;
+  background: #D50A0A;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.tiebreaker-submit:hover {
+  background: #b00808;
+}
+
+.tiebreaker-value {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+.tiebreaker-value strong {
+  color: #FFB612;
+}
+
+@media (max-width: 600px) {
+  .tiebreaker {
+    padding: 1rem;
+  }
+
+  .tiebreaker-form {
+    flex-direction: column;
+  }
+
+  .tiebreaker-submit {
+    width: 100%;
+  }
+}

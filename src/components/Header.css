@@ -1,0 +1,130 @@
+.header {
+  background: linear-gradient(135deg, #013369 0%, #002244 100%);
+  color: white;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-icon {
+  font-size: 2rem;
+}
+
+.header-logo h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.header-stats {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+.header-user {
+  min-width: 150px;
+}
+
+.name-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.name-input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  width: 120px;
+}
+
+.name-submit {
+  padding: 0.5rem 1rem;
+  background: #D50A0A;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.name-submit:hover {
+  background: #b00808;
+}
+
+.user-display {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.user-display:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.user-name {
+  font-weight: 600;
+}
+
+.edit-hint {
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+@media (max-width: 600px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-logo h1 {
+    font-size: 1.25rem;
+  }
+
+  .header-stats {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}

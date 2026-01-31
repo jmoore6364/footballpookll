@@ -1,0 +1,102 @@
+.leaderboard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.leaderboard-header {
+  background: linear-gradient(135deg, #013369 0%, #002244 100%);
+  color: white;
+  padding: 1rem;
+}
+
+.leaderboard-header h2 {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.leaderboard-table {
+  padding: 0.5rem;
+}
+
+.leaderboard-row {
+  display: grid;
+  grid-template-columns: 50px 1fr 60px 60px;
+  align-items: center;
+  padding: 0.75rem 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.leaderboard-row:last-child {
+  border-bottom: none;
+}
+
+.leaderboard-row.header-row {
+  font-size: 0.75rem;
+  color: #666;
+  text-transform: uppercase;
+  font-weight: 600;
+  background: #f8f9fa;
+  border-radius: 4px;
+  margin-bottom: 0.25rem;
+}
+
+.leaderboard-row.current-user {
+  background: rgba(1, 51, 105, 0.05);
+  border-left: 3px solid #013369;
+  font-weight: 600;
+}
+
+.leaderboard-row.top-1 {
+  background: rgba(255, 215, 0, 0.1);
+}
+
+.leaderboard-row.top-2 {
+  background: rgba(192, 192, 192, 0.1);
+}
+
+.leaderboard-row.top-3 {
+  background: rgba(205, 127, 50, 0.1);
+}
+
+.rank-col {
+  font-weight: 600;
+  text-align: center;
+}
+
+.name-col {
+  padding-left: 0.5rem;
+}
+
+.score-col,
+.total-col {
+  text-align: center;
+  font-weight: 600;
+}
+
+.score-col {
+  color: #013369;
+}
+
+.total-col {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.leaderboard-empty {
+  text-align: center;
+  padding: 2rem;
+  color: #888;
+}
+
+@media (max-width: 600px) {
+  .leaderboard-row {
+    grid-template-columns: 40px 1fr 50px 50px;
+    font-size: 0.9rem;
+  }
+
+  .leaderboard-row.header-row {
+    font-size: 0.65rem;
+  }
+}

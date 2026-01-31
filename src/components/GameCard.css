@@ -1,0 +1,188 @@
+.game-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.game-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.game-card.final {
+  opacity: 0.9;
+}
+
+.game-card.in_progress {
+  border: 2px solid #D50A0A;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: #f8f9fa;
+  border-bottom: 1px solid #eee;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.game-time {
+  font-weight: 600;
+}
+
+.game-card.in_progress .game-time {
+  color: #D50A0A;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.teams-container {
+  padding: 0.5rem;
+}
+
+.team-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  margin: 0.25rem 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 2px solid transparent;
+}
+
+.team-row:hover {
+  background: #f0f4f8;
+}
+
+.game-card.final .team-row,
+.game-card.in_progress .team-row {
+  cursor: default;
+}
+
+.team-row.selected {
+  border-color: var(--team-color, #013369);
+  background: rgba(1, 51, 105, 0.05);
+}
+
+.team-row.winner {
+  background: rgba(40, 167, 69, 0.1);
+}
+
+.team-row.correct {
+  border-color: #28a745;
+  background: rgba(40, 167, 69, 0.15);
+}
+
+.team-row.incorrect {
+  border-color: #dc3545;
+  background: rgba(220, 53, 69, 0.1);
+}
+
+.team-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.team-color-bar {
+  width: 4px;
+  height: 36px;
+  border-radius: 2px;
+}
+
+.team-city {
+  font-size: 0.75rem;
+  color: #666;
+  min-width: 70px;
+}
+
+.team-name {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.team-spread {
+  font-size: 0.75rem;
+  color: #888;
+  background: #f0f0f0;
+  padding: 0.125rem 0.375rem;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+}
+
+.team-score-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.team-score {
+  font-size: 1.25rem;
+  font-weight: 700;
+  min-width: 30px;
+  text-align: right;
+}
+
+.team-row.winner .team-score {
+  color: #28a745;
+}
+
+.pick-indicator {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.team-row.selected:not(.correct):not(.incorrect) .pick-indicator {
+  color: #FFB612;
+}
+
+.team-row.correct .pick-indicator {
+  color: #28a745;
+}
+
+.team-row.incorrect .pick-indicator {
+  color: #dc3545;
+}
+
+.at-symbol {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #999;
+  padding: 0.25rem 0;
+}
+
+.pick-prompt {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #888;
+  padding: 0.5rem;
+  background: #f8f9fa;
+  border-top: 1px solid #eee;
+}
+
+@media (max-width: 600px) {
+  .team-city {
+    display: none;
+  }
+
+  .team-name {
+    font-size: 0.9rem;
+  }
+
+  .team-spread {
+    font-size: 0.7rem;
+  }
+
+  .team-score {
+    font-size: 1.1rem;
+  }
+}
